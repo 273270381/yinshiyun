@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myezopen.myezopen">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8474844b61d213ddafb0282100b3473c"
+            />
+        <activity android:name=".LoginSelectActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CameraListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.main.EzvizWebViewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity
+            android:name=".remoteplayback.EZRemotePlayBackActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".realplay.RealPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".remoteplayback.list.PlayBackListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="nosensor"/>
+        <activity
+            android:name=".message.EZMessageActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".devicemgt.EZDeviceSettingActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".message.EZMessageImageActivity2"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".datamanager.RecycleViewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".datamanager.PictureActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".devicemgt.EZUpgradeDeviceActivity"
+            android:label="@string/title_activity_ezupgrade_device">
+        </activity>
+        <activity
+            android:name=".devicemgt.ModifyDeviceNameActivity"
+            android:screenOrientation="portrait"/>
+        <service android:name="com.amap.api.location.APSService"></service>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- zxing -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+</manifest>
